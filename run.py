@@ -61,4 +61,31 @@ def main():
 
         short_code = input().lower()
 
-        
+        if short_code == '1':
+            print("New user")
+            print("-"*10)
+
+            print("First name ...")
+            f_name = input()
+
+            print ("Last name ...")
+            l_name = input()
+
+            print("phone number ...")
+            p_number = input()
+
+            print("Email address ...")
+            e_address = input()
+
+            print("password ...")
+            password = input()
+
+            print("confirm password ...")
+            password = input()
+
+            save_users(create_user(f_name,l_name,p_number,e_address,password))
+            print('\n')
+            print(f"New user {f_name} {l_name} created")
+            print('\n')
+            
+
