@@ -46,3 +46,15 @@ def main():
     user_name = input()
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
+
+    while True
+
+        list = ('''
+        create new account
+        display accounts
+        search for accounts
+        exit password
+        ''')
+
+        print (list)
+        print("use these short codes")
