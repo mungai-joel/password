@@ -94,6 +94,43 @@ def main():
                 print("here is a list of all your users")
                 print('\n')
 
-            for user in display_users(
-            )
+            for user in display_users():
+
+                print(f"{user.first_name} {user.last_name} {user.phone_number}")
+
+                print('\n')
+
+            else:
+                print('\n')
+
+                print('\n')
+
+        elif short_code == '3':
+
+            print("Enter the number to search for ")
+
+            search_number = input()
+            if check_existing_users(search_number):
+                search_user = find_user(search_number)
+                print(f"{search_user.first_name} {search_user.last_name}")
+                print('-' * 20)
+
+                print(f"phone number.........{search_user.phone_number}")
+                print(f"Email address.........{search_user.email}")
+            else:
+                print("That user does not exist")
+
+
+            elif short_code == "4":
+                print
+                ("bye ....")
+
+                break
+            else:
+                print("I didnt get it, please use short codes ")
+
+if __name__ == '__main__':
+    main()
+
+    
 
