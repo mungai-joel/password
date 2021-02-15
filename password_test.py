@@ -72,52 +72,52 @@ class TestUser(unittest.TestCase):
         self.assertEqual(len(User.user_list),2)
 
 
-#     def test_find_user_by_number(self):
-#         '''
-#         test to check if we can find a user by phone number and display information
-#         '''
+    def test_find_user_by_number(self):
+        '''
+        test to check if we can find a user by phone number and display information
+        '''
 
-#         self.new_user.save_user()
-#         test_user = User("Test","user","0711223344","test@user.com","784563475") # new user
-#         test_user.save_user()
+        self.new_user.save_user()
+        test_user = User("Test","user","0711223344","test@user.com","784563475") # new user
+        test_user.save_user()
 
-#         found_user = User.find_by_number("0711223344")
+        found_user = User.find_by_number("0711223344")
 
-#         self.assertEqual(found_user.email,test_user.email)
-
-
-#     def test_user_exists(self):
-#         '''
-#         test to check if we can return a Boolean  if we cannot find the user.
-#         '''
-
-#         self.new_user.save_user()
-#         test_user = User("Test","user","0711223344","test@user.com","784563475") # new user
-#         test_user.save_user()
-
-#         user_exists = User.user_exist("0711223344")
-
-#         self.assertTrue(user_exists)
+        self.assertEqual(found_user.email,test_user.email)
 
 
-#     def test_display_all_users(self):
-#         '''
-#         method that returns a list of all users saved
-#         '''
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the user.
+        '''
 
-#         self.assertEqual(User.display_users(),User.user_list)
+        self.new_user.save_user()
+        test_user = User("Test","user","0711223344","test@user.com","784563475") # new user
+        test_user.save_user()
 
+        user_exists = User.user_exist("0711223344")
 
-#     def test_copy_email(self):
-#         '''
-#         Test to confirm that we are copying the email address from a found user
-#         '''
-
-#         self.new_user.save_user()
-#         User.copy_email("0712345678")
-
-#         self.assertEqual(self.new_user.email,pyperclip.paste())
+        self.assertTrue(user_exists)
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+    def test_display_all_users(self):
+        '''
+        method that returns a list of all users saved
+        '''
+
+        self.assertEqual(User.display_users(),User.user_list)
+
+
+    def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found user
+        '''
+
+        self.new_user.save_user()
+        User.copy_email("0712345678")
+
+        self.assertEqual(self.new_user.email,pyperclip.paste())
+
+
+if __name__ == '__main__':
+    unittest.main()
