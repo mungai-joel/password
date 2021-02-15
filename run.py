@@ -1,12 +1,13 @@
 from user import User
 
-def create_user (fname,lname,phone,email,password):
+def create_user (first_name,last_name,number,email,password):
+
     '''
     Function to create a  new user
 
     '''
-    new_user = User(fname,lname,phone,email,password)
-    
+    new_user = User(first_name,last_name,number,email,password)
+
     return new_user
 
 def save_users (user):
@@ -51,14 +52,14 @@ def main():
     while True
 
         list = ('''
-        create new account
-        display accounts
-        search for accounts
-        exit password
+        1.create new account
+        2.display accounts
+        3.search for accounts
+        4.exit password
         ''')
 
         print (list)
-        print("use these short codes : create new account  ,  display accounts  ,  search for accounts  ,  exit password  ")
+        print("use these short codes : 1. create new account  ,  2. display accounts  ,  3. search for accounts  ,  4. exit password  ")
 
         short_code = input().lower()
 
@@ -67,16 +68,16 @@ def main():
             print("-"*10)
 
             print("First name ...")
-            f_name = input()
+            first_name = input()
 
             print ("Last name ...")
-            l_name = input()
+            last_name = input()
 
             print("phone number ...")
-            p_number = input()
+            number = input()
 
             print("Email address ...")
-            e_address = input()
+            email = input()
 
             print("password ...")
             password = input()
@@ -84,9 +85,9 @@ def main():
             print("confirm password ...")
             password = input()
 
-            save_users(create_user(f_name,l_name,p_number,e_address,password))
+            save_users(create_user(first_name,last_name,number,email,password))
             print('\n')
-            print(f"New user {f_name} {l_name} created")
+            print(f"New user {first_name} {last_name} created")
             print('\n')
 
         elif short_code == '2':
@@ -97,7 +98,7 @@ def main():
 
             for user in display_users():
 
-                print(f"{user.first_name} {user.last_name} {user.phone_number}")
+                print(f"{user.first_name} {user.last_name} {user.number}")
 
                 print('\n')
 
@@ -116,7 +117,7 @@ def main():
                 print(f"{search_user.first_name} {search_user.last_name}")
                 print('-' * 20)
 
-                print(f"phone number.........{search_user.phone_number}")
+                print(f"phone number.........{search_user.number}")
                 print(f"Email address.........{search_user.email}")
             else:
                 print("That user does not exist")
