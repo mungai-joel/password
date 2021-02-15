@@ -1,11 +1,12 @@
 from user import User
 
-def create_user(fname,lname,phone,email,password):
+def create_user (fname,lname,phone,email,password):
     '''
     Function to create a  new user
 
     '''
     new_user = User(fname,lname,phone,email,password)
+    
     return new_user
 
 def save_users (user):
@@ -132,5 +133,5 @@ def main():
 if __name__ == '__main__':
     main()
 
-    
+
 
