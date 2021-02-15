@@ -87,5 +87,11 @@ def main():
             print('\n')
             print(f"New user {f_name} {l_name} created")
             print('\n')
-            
+
+        elif short_code == '2':
+
+            if display_users():
+                print("here is a list of all your users")
+                print('\n')
+
 
