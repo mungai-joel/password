@@ -40,3 +40,6 @@ def display_users():
 
     '''
     return User.display_users()
+
+def main():
+    
