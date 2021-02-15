@@ -1,3 +1,5 @@
+#! /usr/bin/python3
+
 from user import User
 
 def create_user (first_name,last_name,number,email,password):
@@ -49,7 +51,7 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
 
-    while True
+    while True:
 
         list = ('''
         1.create new account
@@ -119,17 +121,15 @@ def main():
 
                 print(f"phone number.........{search_user.number}")
                 print(f"Email address.........{search_user.email}")
-            else:
-                print("That user does not exist")
 
 
-            elif short_code == "4":
-                print
-                ("bye ....")
+        elif short_code == '4':
+            print("bye ....")
 
-                break
-            else:
-                print("I didnt get it, please use short codes ")
+                
+            break
+        else:
+            print("I didnt get it, please use short codes ")
 
 if __name__ == '__main__':
     main()
