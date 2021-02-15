@@ -94,4 +94,6 @@ def main():
                 print("here is a list of all your users")
                 print('\n')
 
+            for user in display_users(
+            )
 
