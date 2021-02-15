@@ -42,4 +42,6 @@ def display_users():
     return User.display_users()
 
 def main():
-    
+    print("Hello welcome to your user list. what is your name?")
+    user_name = input()
+    pr
