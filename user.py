@@ -8,7 +8,7 @@ class User:
 
         self.first_name = first_name
         self.last_name = last_name
-        self.phone_number = number
+        self.number = number
         self.email = email
         self.password = password
 
@@ -40,14 +40,14 @@ class User:
             boolean: true or false
         '''
         for user in cls.user_list:
-            if user.phone_number === number:
+            if user.number === number:
                 return True
 
         return False
 
     @classmethod
     def display_users(cls):
-        
+
         '''
         method that returns the user list
         '''
