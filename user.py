@@ -1,3 +1,6 @@
+#! /usr/bin/python3
+
+
 import pyperclip 
 
 class User:
@@ -30,7 +33,7 @@ class User:
         User.user_list.remove(self)
 
     @classmethod
-    def find_by_number(cls.number):
+    def find_by_number(cls,number):
 
         '''
         Method that checks if a user exists from the list 
@@ -40,7 +43,7 @@ class User:
             boolean: true or false
         '''
         for user in cls.user_list:
-            if user.number === number:
+            if user.number == number:
                 return True
 
         return False
