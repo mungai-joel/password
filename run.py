@@ -57,4 +57,6 @@ def main():
         ''')
 
         print (list)
-        print("use these short codes")
+        print("use these short codes : create new account  ,  display accounts  ,  search for accounts  ,  exit password  ")
+
+        
