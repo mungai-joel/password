@@ -31,7 +31,7 @@ class User:
 
     @classmethod
     def find_by_number(cls.number):
-        
+
         '''
         Method that checks if a user exists from the list 
         Args:
@@ -47,6 +47,7 @@ class User:
 
     @classmethod
     def display_users(cls):
+        
         '''
         method that returns the user list
         '''
